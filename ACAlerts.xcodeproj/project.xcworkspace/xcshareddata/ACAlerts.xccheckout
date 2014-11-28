@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9C5C65D5-0286-4222-8A7B-2F578E617397</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ACAlerts</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>86CBCA32A67D2C92EAC35FEB965AC6F3C2775924</key>
+		<string>https://github.com/dfmorrisjr/ACAlerts-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ACAlerts.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>86CBCA32A67D2C92EAC35FEB965AC6F3C2775924</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dfmorrisjr/ACAlerts-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>86CBCA32A67D2C92EAC35FEB965AC6F3C2775924</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>86CBCA32A67D2C92EAC35FEB965AC6F3C2775924</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ACAlerts-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
