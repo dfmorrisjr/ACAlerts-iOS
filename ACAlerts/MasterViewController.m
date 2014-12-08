@@ -47,7 +47,7 @@ User *user;
     [self testUser];
     */
     
-    [self configureRestKit];
+    //[self configureRestKit];
     [self loadTeams];
     
 }
@@ -68,37 +68,53 @@ User *user;
 -(void)configureRestKit{
     
     // initialized AFNetworking HTTPClient
-    NSURL *baseURL = [NSURL URLWithString:@"http://54.84.48.247"];
-    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    NSURL *baseURLTeams = [NSURL URLWithString:@"http://54.84.48.247"];
+    AFHTTPClient *clientTeams = [[AFHTTPClient alloc] initWithBaseURL:baseURLTeams];
     
     // initialize RestKit
-    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    RKObjectManager *objectManagerTeams = [[RKObjectManager alloc] initWithHTTPClient:clientTeams];
     
     // setup object mappings
     RKObjectMapping *teamMapping = [RKObjectMapping mappingForClass:[Team class]];
     [teamMapping addAttributeMappingsFromArray:@[@"TeamName",@"TwilioPhoneNumber"]];
     
     // register mapping with the provider using a response descriptor
-    RKResponseDescriptor *responseDescriptor =
+    RKResponseDescriptor *responseDescriptorTeams =
         [RKResponseDescriptor responseDescriptorWithMapping:teamMapping
                                                      method:RKRequestMethodGET
-                                                    pathPattern:@"/acalerts/public/index.php/api/v1.0/team"
-                                                    keyPath:nil
+                                                pathPattern:@"/acalerts/public/index.php/api/v1.0/team"
+                                                    keyPath:Nil
                                                 statusCodes:[NSIndexSet indexSetWithIndex:200]];
 
-    [objectManager addResponseDescriptor:responseDescriptor];
-    [objectManager.HTTPClient setAuthorizationHeaderWithUsername:user.username password:user.password];
+    [objectManagerTeams addResponseDescriptor:responseDescriptorTeams];
+    //[objectManagerTeams addResponseDescriptor:responseDescriptorTeams];
+    [objectManagerTeams.HTTPClient setAuthorizationHeaderWithUsername:user.username password:user.password];
     
 }
 - (void) loadTeams{
     RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelDebug);
+    
+    /* Second attempt with a new RKObjectManager
+    RKObjectManager *sharedManagerTeams = [RKObjectManager sharedManager];
+    [sharedManagerTeams getObjectsAtPath: @"/acalerts/public/index.php/api/v1.0/team"
+                              parameters:nil
+                                 success:^(RKObjectRequestOperation *operationTeams, RKMappingResult *mappingResultTeams) {
+                                     _teams = mappingResultTeams.array;
+                                 }
+                                 failure:^(RKObjectRequestOperation *operationTeams, NSError *error) {
+                                     NSLog(@"What do you mean by 'there are no teams?': %@", error);
+                                 }];
+    
+    */
+    
+    /*  THis works with only 1 call fails on get Teams */
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/acalerts/public/index.php/api/v1.0/team"
                                            parameters:nil
-                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  _teams = mappingResult.array;
+                                              success:^(RKObjectRequestOperation *operationTeams, RKMappingResult *mappingResultTeams) {
+                                                  _teams = mappingResultTeams.array;
                                                   [self.tableView reloadData];
                                               }
-                                              failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                              failure:^(RKObjectRequestOperation *operationTeams, NSError *error) {
                                                   NSLog(@"What do you mean by 'there are no teams?': %@", error);
                                               }];
     

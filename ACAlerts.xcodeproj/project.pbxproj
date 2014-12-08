@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7F4BDC7C1A28F33F00CCEB01 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BDC7B1A28F33F00CCEB01 /* User.m */; };
 		7F4BDC7F1A290EB100CCEB01 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BDC7E1A290EB100CCEB01 /* Team.m */; };
+		7F4BDC821A327C6300CCEB01 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BDC811A327C6300CCEB01 /* LoginViewController.m */; };
+		7F4BDC851A340B6E00CCEB01 /* LoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BDC841A340B6E00CCEB01 /* LoginResult.m */; };
 		7FB3B5FE1A259E8800AF3596 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3B5FD1A259E8800AF3596 /* main.m */; };
 		7FB3B6011A259E8800AF3596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3B6001A259E8800AF3596 /* AppDelegate.m */; };
 		7FB3B6041A259E8800AF3596 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3B6031A259E8800AF3596 /* MasterViewController.m */; };
@@ -36,6 +38,10 @@
 		7F4BDC7B1A28F33F00CCEB01 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		7F4BDC7D1A290EB100CCEB01 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		7F4BDC7E1A290EB100CCEB01 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		7F4BDC801A327C6300CCEB01 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7F4BDC811A327C6300CCEB01 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7F4BDC831A340B6E00CCEB01 /* LoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResult.h; sourceTree = "<group>"; };
+		7F4BDC841A340B6E00CCEB01 /* LoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResult.m; sourceTree = "<group>"; };
 		7FB3B5F81A259E8800AF3596 /* ACAlerts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACAlerts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB3B5FC1A259E8800AF3596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB3B5FD1A259E8800AF3596 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +126,10 @@
 				7FB3B5FB1A259E8800AF3596 /* Supporting Files */,
 				7F4BDC7D1A290EB100CCEB01 /* Team.h */,
 				7F4BDC7E1A290EB100CCEB01 /* Team.m */,
+				7F4BDC801A327C6300CCEB01 /* LoginViewController.h */,
+				7F4BDC811A327C6300CCEB01 /* LoginViewController.m */,
+				7F4BDC831A340B6E00CCEB01 /* LoginResult.h */,
+				7F4BDC841A340B6E00CCEB01 /* LoginResult.m */,
 			);
 			path = ACAlerts;
 			sourceTree = "<group>";
@@ -293,10 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4BDC851A340B6E00CCEB01 /* LoginResult.m in Sources */,
 				7F4BDC7C1A28F33F00CCEB01 /* User.m in Sources */,
 				7FB3B6011A259E8800AF3596 /* AppDelegate.m in Sources */,
 				7FB3B6041A259E8800AF3596 /* MasterViewController.m in Sources */,
 				7FB3B5FE1A259E8800AF3596 /* main.m in Sources */,
+				7F4BDC821A327C6300CCEB01 /* LoginViewController.m in Sources */,
 				7F4BDC7F1A290EB100CCEB01 /* Team.m in Sources */,
 				7FB3B6071A259E8800AF3596 /* DetailViewController.m in Sources */,
 			);
